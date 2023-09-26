@@ -14,14 +14,14 @@ nav{
     display: flex;
     justify-content: center;
 }
-nav>a{
+a{
     text-decoration: none;
     color: white;
+}
+nav>a{
     margin: 1rem;
 }
-#content{
-    
-}
+
 #content>div{
     padding-top: 3rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,14 +41,14 @@ h1{
     color: #e44e59;
 }
 #bio{
-    background-color: #1A1D22;
-    color: #D1D2D4;
+    background-color: #191a1c;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
     box-shadow: 0px 0px 15px 0px rgba(256,256,256,0.25);
 }
+
 #displayImage{
     width: 100px;
     height: 100px;
@@ -98,15 +98,12 @@ li{
     max-width: 100%; 
     height: auto;
   }
-  
-  .screenshot {
+.screenshot {
     width: 100%; 
     height: auto; 
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-  }
-  
-
+}
 .project_item{
     padding: 1rem;
     display: flex;
@@ -115,7 +112,6 @@ li{
     text-align: center;
     color: #989898;
 }
-
 .project_item>h2{
     color: white;
 }
@@ -125,10 +121,6 @@ li{
     width: fit-content;
     padding: 1rem 2rem;
     border-radius: 1rem;
-}
-.button>a{
-    text-decoration: none;
-    color: white;
 }
 @media screen and (max-width: 768px) {
     #home_content,.project_item_content{
