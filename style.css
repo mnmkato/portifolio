@@ -62,7 +62,10 @@
     background-color: var(--color2);
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;
-    padding: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 2rem;
     box-shadow: 0px 0px 15px 0px rgba(256, 256, 256, 0.25);
   }
