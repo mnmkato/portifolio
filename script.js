@@ -1,27 +1,8 @@
-generateHome()
-generateSkills()
-generateprojects()
-function generateHome() {
-    const displayImage = "https://ca.slack-edge.com/T05FFAA91JP-U05RYRH1FH7-6d00d18ebc45-512"
-    const githubURL = "https://github.com/mnmkato/"
-    const about = "I'm a passionate front-end developer with experience collaborating on diverse projects, where I've learnt many skills and technologies. I'm committed to  performance optimization and  ensuring mobile responsiveness in projects I've done. Thank you for visiting my portfolio."
-
-    const displayImage_img =  document.getElementById('displayImage')
-    displayImage_img.setAttribute("alt",userName)
-    displayImage_img.setAttribute("src",displayImage)
-
-    const githubURL_a = document.getElementById('githubURL')
-    githubURL_a.textContent= githubURL
-    githubURL_a.setAttribute("href",githubURL)
-
-    const about_div = document.getElementById("about")
-    const about_p = document.createElement("p")
-    about_p.textContent= about
-    about_div.appendChild(about_p)
-
-}
-function generateSkills() {
-    const skills = [
+const data = {
+    displayImage:"https://ca.slack-edge.com/T05FFAA91JP-U05RYRH1FH7-6d00d18ebc45-512",
+    githubURL:"https://github.com/mnmkato/",
+    about:"I'm a passionate front-end developer with experience collaborating on diverse projects, where I've learnt different languages, frameworks and technologies. I'm committed to  performance optimization and  ensuring mobile responsiveness in projects I've done. Thank you for visiting my portfolio.",
+    skills:[
         {
             type: "Language",
             list: ["JavaScript", "Python", "HTML/CSS"]
@@ -33,12 +14,48 @@ function generateSkills() {
         {
             type: "Technologies",
             list: ["Git", "Webpack", "Vite"]
+        }],
+    projectList:[
+        {
+          screenshot: "screenshots/movie_project.PNG",
+          title: "Movie Box",
+          description: "A movie web app that shows the top 10 most popular movies, implements movie search and shows movie details",
+          ingredients: ["Javascript", "React", "HTML/CSS","Vite","TMDB API"],
+          date: "September 2023",
+          code: "https://github.com/mnmkato/movie-project",
+          demo: "https://mnmkato.github.io/movie-project/",
         },
-    ];
+        {
+            screenshot: "screenshots/weather_app.PNG",
+            title: "Weather App",
+            description: "A simple web application that provides real-time weather information based on your location.",
+            ingredients: ["Javascript","HTML/CSS", "Webpack", "Weather API"],
+            date: "August 2023",
+            code: "",
+            demo: "#",
+        }]
+}
+generateHome()
+generateSkills()
+generateprojects()
+function generateHome() {
+    const displayImage_img =  document.getElementById('displayImage')
+    displayImage_img.setAttribute("alt",userName)
+    displayImage_img.setAttribute("src",data.displayImage)
+
+    const githubURL_a = document.getElementById('githubURL')
+    githubURL_a.textContent= data.githubURL
+    githubURL_a.setAttribute("href",data.githubURL)
+
+    const about_div = document.getElementById("about")
+    const about_p = document.createElement("p")
+    about_p.textContent= data.about
+    about_div.appendChild(about_p)
+}
+function generateSkills() {
+    const skillsContainer = document.getElementById("skills_content");
     
-    const skillsContainer = document.getElementById("skills");
-    
-    skills.forEach(skillCategory => {
+    data.skills.forEach(skillCategory => {
         const categoryTitle = document.createElement("h3");
         categoryTitle.textContent = skillCategory.type;
 
@@ -58,32 +75,10 @@ function generateSkills() {
     });
 }
 function generateprojects() {
-    
-    // projects data
-const projectList = [
-    {
-      screenshot: "screenshots/movie_project.PNG",
-      title: "Movie Box",
-      description: "A movie web app thet shows the top 10 most popular movies, implements movie search and shows movie details",
-      ingredients: ["Javascript", "React", "HTML/CSS","Vite","TMDB API"],
-      date: "September 2023",
-      code: "https://github.com/mnmkato/movie-project",
-      demo: "https://mnmkato.github.io/movie-project/",
-    },
-    {
-        screenshot: "screenshots/weather_app.PNG",
-        title: "Weather App",
-        description: "A simple web application that provides real-time weather information based on your location.",
-        ingredients: ["Javascript","HTML/CSS", "Webpack", "Weather API"],
-        date: "August 2023",
-        code: "",
-        demo: "#",
-      },
-  ];
-  
+
   const projects = document.getElementById("projects_grid");
   
-  projectList.forEach((project) => {
+  data.projectList.forEach((project) => {
     const projectItemContent = document.createElement("div");
     projectItemContent.classList.add("project_item_content");
 
@@ -166,6 +161,4 @@ const projectList = [
     projects.appendChild(projectItemContent);
   });
 
-
-    
 }
