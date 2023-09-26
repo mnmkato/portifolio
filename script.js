@@ -60,7 +60,6 @@ const data = {
           title: "Movie Box",
           description: "A movie web app that shows the top 10 most popular movies, implements movie search and shows movie details",
           ingredients: ["Javascript", "React", "HTML/CSS","Vite","TMDB API"],
-          date: "September 2023",
           code: "https://github.com/mnmkato/movie-project",
           demo: "https://mnmkato.github.io/movie-project/",
         },
@@ -69,7 +68,6 @@ const data = {
             title: "Weather App",
             description: "A simple web application that provides real-time weather information based on your location.",
             ingredients: ["Javascript","HTML/CSS", "Webpack", "Weather API"],
-            date: "August 2023",
             code: "https://github.com/mnmkato/WeatherApp",
             demo: "https://mnmkato.github.io/WeatherApp/dist/",
         }]
@@ -166,10 +164,6 @@ function generateprojects() {
       techIconsElement.appendChild(techIcon);
     });
   
-    // date
-    const dateElement = document.createElement("p");
-    dateElement.textContent = project.date;
-  
     // code 
     const codeButton = document.createElement("div");
     codeButton.classList.add("button");
@@ -193,12 +187,10 @@ function generateprojects() {
     demoLink.appendChild(demoIcon);
     demoLink.appendChild(demoText);
     demoButton.appendChild(demoLink);
-  
    
     projectCard.appendChild(titleElement);
     projectCard.appendChild(descriptionElement);
     projectCard.appendChild(techIconsElement);
-    projectCard.appendChild(dateElement);
     projectCard.appendChild(codeButton);
     projectCard.appendChild(demoButton);
 
