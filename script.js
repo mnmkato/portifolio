@@ -17,7 +17,7 @@ const data = {
         }],
     projectList:[
         {
-          screenshot: "screenshots/movie_project.PNG",
+          screenshot: "./screenshots/movie_project.PNG",
           title: "Movie Box",
           description: "A movie web app that shows the top 10 most popular movies, implements movie search and shows movie details",
           ingredients: ["Javascript", "React", "HTML/CSS","Vite","TMDB API"],
@@ -26,7 +26,7 @@ const data = {
           demo: "https://mnmkato.github.io/movie-project/",
         },
         {
-            screenshot: "screenshots/weather_app.PNG",
+            screenshot: "./screenshots/weather_app.PNG",
             title: "Weather App",
             description: "A simple web application that provides real-time weather information based on your location.",
             ingredients: ["Javascript","HTML/CSS", "Webpack", "Weather API"],
