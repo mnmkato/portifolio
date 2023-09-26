@@ -62,14 +62,16 @@
     background-color: var(--color2);
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-bottom: 2rem;
     border-radius: 2rem;
     box-shadow: 0px 0px 15px 0px rgba(256, 256, 256, 0.25);
   }
-  
+  #bio>img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
   #displayImage {
     width: 100px;
     height: 100px;
@@ -137,7 +139,7 @@
     align-items: center;
     background-color: var(--color2);
   }
-  
+ 
   .screenshot-wrapper {
     max-width: 100%;
     height: auto;
@@ -162,7 +164,9 @@
   .project_item > h2 {
     color: var(--color3);
   }
-  
+  .tech-icon{
+    margin-bottom: 1rem;
+}
   .button {
     background-color: var(--color4);
     margin: 1rem;
